@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Search Results</title>
+</head>
+<body>
+    <h1>Book Search Results</h1>
+    <br>
+    {% if books %}
+        <ul>
+            {% for book in books %}
+                <li>Title: {{ book.title }}</li>
+                <br>
+                <li> Author: {{ book.author }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books found</p>
+    {% endif %}
+</body>
+</html>
